@@ -370,7 +370,6 @@ private extension TagCollectionViewController {
         )
         let itemLayout = NSCollectionLayoutItem(layoutSize: itemSize)
 
-        /*
         let rowGroupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1),
             heightDimension: itemSize.heightDimension
@@ -382,7 +381,7 @@ private extension TagCollectionViewController {
         rowGroup.interItemSpacing = .fixed(12)
 
         let columnGroupSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(2),
+            widthDimension: .fractionalWidth(1),
             heightDimension: .fractionalHeight(1)
         )
         let columnGroup = NSCollectionLayoutGroup.vertical(
@@ -391,8 +390,8 @@ private extension TagCollectionViewController {
             count: 2
         )
         columnGroup.interItemSpacing = .fixed(12)
-         */
 
+        /*
         let layoutGroupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1),
             heightDimension: itemSize.heightDimension
@@ -402,8 +401,9 @@ private extension TagCollectionViewController {
             subitems: [itemLayout]
         )
         layoutGroup.interItemSpacing = .fixed(12)
+        */
 
-        let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
+        let layoutSection = NSCollectionLayoutSection(group: columnGroup)
         layoutSection.contentInsets = NSDirectionalEdgeInsets(
             top: .zero,
             leading: 20,
